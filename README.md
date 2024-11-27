@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+### React Blog frontend Project
+React 기반 Web application을 개발하기 위한 개인 프로젝트
+
+개발 환경 : node.js 18.16.0 
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
