@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>React Blog</title>
+        <title>Skylee's React Blog</title>
       </Helmet>
       <Routes>
         <Route path="/" element={<PostListPage />} />

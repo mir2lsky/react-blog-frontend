@@ -7,6 +7,7 @@ import write, { writeSaga } from './write';
 import post, { postSaga } from './post';
 import posts, { postsSaga } from './posts';
 
+// 모듈별로 정의된 각 reducer(store)를 rootReducer로 통합해서 하나의 store 생성
 const rootReducer = combineReducers({
   auth,
   loading,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   posts,
 });
 
+// 모듈별로 정의된 사가를 rootSaga로 통합해서 처리
 export function* rootSaga() {
   yield all([authSaga(), userSaga(), writeSaga(), postSaga(), postsSaga()]);
 }

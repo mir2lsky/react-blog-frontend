@@ -1,14 +1,18 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { changeField, initializeForm, register } from '../../modules/auth';
 import { useEffect, useState } from 'react';
-import AuthForm from '../../components/auth/AuthForm';
-import { check } from '../../modules/user';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { changeField, initializeForm, register } from '../../modules/auth';
+import { check } from '../../modules/user';
+import AuthForm from '../../components/auth/AuthForm';
 
 const RegisterForm = ({ history }) => {
+  // 컴포넌트 내부 상태
   const [error, setError] = useState(null);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  // rootReducer에 등록된 state등의 집합에서 auth, user 취득
   const { form, auth, authError, user } = useSelector(({ auth, user }) => ({
     form: auth.register,
     auth: auth.auth,

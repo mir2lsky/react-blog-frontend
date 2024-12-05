@@ -39,7 +39,9 @@ loadUser();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* // 스토어 적용 */}
     <Provider store={store}>
+      {/* // 브라우저라우터 설정 */}
       <BrowserRouter>
         <HelmetProvider>
           <App />
